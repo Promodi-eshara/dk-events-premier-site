@@ -40,10 +40,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="DK Events" className="h-10 w-10 rounded object-cover" />
-          <span className="font-display text-xl tracking-wider text-foreground">
-            DK <span className="text-primary">Events</span>
-          </span>
+          <img src={logo} alt="DK Events" className="h-14 w-auto object-contain" />
         </a>
 
         {/* Desktop nav */}

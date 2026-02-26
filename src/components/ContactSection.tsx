@@ -11,9 +11,20 @@ const ContactSection = () => {
     message: "",
   });
 
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setSending(true);
+    const subject = encodeURIComponent(`Event Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nEvent Type: ${formData.eventType}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:Info@dkevents.ae?subject=${subject}&body=${body}`;
+    setSending(false);
+    setSent(true);
+    setTimeout(() => setSent(false), 3000);
   };
 
   return (
@@ -99,9 +110,10 @@ const ContactSection = () => {
             />
             <button
               type="submit"
+              disabled={sending}
               className="px-8 py-3 bg-gold-gradient text-primary-foreground font-body text-sm tracking-widest uppercase rounded hover:opacity-90 transition-opacity flex items-center gap-2"
             >
-              Send Message <Send className="w-4 h-4" />
+              {sent ? "Message Sent ✓" : "Send Message"} <Send className="w-4 h-4" />
             </button>
           </motion.form>
 
