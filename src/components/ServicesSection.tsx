@@ -10,9 +10,9 @@ const services = [
     items: ["Conferences", "Product Launches", "Award Ceremonies"],
   },
   {
-    title: "Weddings",
+    title: "Wedding Events",
     image: weddingImg,
-    items: ["Full Wedding Planning", "Destination Weddings", "Wedding Decor & Coordination"],
+    items: ["Full Wedding Planning", "Destination Weddings", "Wedding Event Coordination"],
   },
   {
     title: "Concert Productions",
