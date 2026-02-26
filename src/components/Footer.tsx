@@ -59,9 +59,10 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-base font-semibold mb-4 text-primary">Contact</h4>
             <div className="space-y-2 font-body text-sm text-muted-foreground">
-              <p>hello@dkevents.com</p>
-              <p>+91 98765 43210</p>
-              <p>Mumbai, India</p>
+              <p>Info@dkevents.ae</p>
+              <p>+971 58 635 4399</p>
+              <p>Rigga Business Center, Office 1001</p>
+              <p>Murqabat, Deira, Dubai, UAE</p>
             </div>
           </div>
         </div>

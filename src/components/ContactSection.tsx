@@ -13,7 +13,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic
     console.log(formData);
   };
 
@@ -115,11 +114,25 @@ const ContactSection = () => {
           >
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full border border-gold flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-display text-base font-semibold mb-1">Address</h4>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Rigga Business Center<br />
+                  Office 1001<br />
+                  Murqabat, Deira<br />
+                  Dubai, United Arab Emirates
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full border border-gold flex items-center justify-center flex-shrink-0">
                 <Phone className="w-5 h-5 text-primary" />
               </div>
               <div>
                 <h4 className="font-display text-base font-semibold mb-1">Phone</h4>
-                <p className="font-body text-sm text-muted-foreground">+91 98765 43210</p>
+                <p className="font-body text-sm text-muted-foreground">+971 58 635 4399</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -128,16 +141,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-display text-base font-semibold mb-1">Email</h4>
-                <p className="font-body text-sm text-muted-foreground">hello@dkevents.com</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full border border-gold flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-display text-base font-semibold mb-1">Location</h4>
-                <p className="font-body text-sm text-muted-foreground">Mumbai, India</p>
+                <div className="font-body text-sm text-muted-foreground space-y-1">
+                  <p>Info@dkevents.ae</p>
+                  <p>Indika@dkevents.ae</p>
+                  <p>Shirly@dkevents.ae</p>
+                  <p>Janaka@dkevents.ae</p>
+                </div>
               </div>
             </div>
 

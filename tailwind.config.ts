@@ -53,9 +53,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+          DEFAULT: "hsl(var(--orange))",
+          light: "hsl(var(--orange-light))",
+          dark: "hsl(var(--orange-dark))",
         },
         cream: {
           DEFAULT: "hsl(var(--cream))",
