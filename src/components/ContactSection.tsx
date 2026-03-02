@@ -154,10 +154,10 @@ const ContactSection = () => {
               <div>
                 <h4 className="font-display text-base font-semibold mb-1">Email</h4>
                 <div className="font-body text-sm text-muted-foreground space-y-1">
-                  <p>Info@dkevents.ae</p>
-                  <p>Indika@dkevents.ae</p>
-                  <p>Shirly@dkevents.ae</p>
-                  <p>Janaka@dkevents.ae</p>
+                  <a href="mailto:Info@dkevents.ae" className="block hover:text-primary transition-colors">Info@dkevents.ae</a>
+                  <a href="mailto:Indika@dkevents.ae" className="block hover:text-primary transition-colors">Indika@dkevents.ae</a>
+                  <a href="mailto:Shirly@dkevents.ae" className="block hover:text-primary transition-colors">Shirly@dkevents.ae</a>
+                  <a href="mailto:Janaka@dkevents.ae" className="block hover:text-primary transition-colors">Janaka@dkevents.ae</a>
                 </div>
               </div>
             </div>
