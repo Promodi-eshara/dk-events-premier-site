@@ -16,6 +16,7 @@ import past7 from "@/assets/past-event-7.jpg";
 import past8 from "@/assets/past-event-8.jpg";
 import past9 from "@/assets/past-event-9.jpg";
 import past10 from "@/assets/past-event-10.jpg";
+import upcomingEvent from "@/assets/upcoming-event.png";
 
 const allImages = [
   { src: gallery1, category: "all" },
@@ -39,12 +40,16 @@ const pastImages = [
   { src: past10, category: "past" },
 ];
 
-const tabs = ["All", "Past Events"] as const;
+const upcomingImages = [
+  { src: upcomingEvent, category: "upcoming" },
+];
+
+const tabs = ["All", "Past Events", "Upcoming Events"] as const;
 
 const GallerySection = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
 
-  const images = activeTab === "All" ? allImages : pastImages;
+  const images = activeTab === "All" ? allImages : activeTab === "Past Events" ? pastImages : upcomingImages;
 
   return (
     <section id="gallery" className="section-padding bg-dark-gradient">
@@ -67,7 +72,7 @@ const GallerySection = () => {
         </motion.h2>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -88,7 +93,7 @@ const GallerySection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4 }}
-          className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4"
+          className={activeTab === "Upcoming Events" ? "flex justify-center" : "columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4"}
         >
           {images.map((img, i) => (
             <motion.div
@@ -97,12 +102,12 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="break-inside-avoid group relative overflow-hidden rounded-lg"
+              className={`break-inside-avoid group relative overflow-hidden rounded-lg ${activeTab === "Upcoming Events" ? "max-w-4xl w-full" : ""}`}
             >
               <img
                 src={img.src}
                 alt="DK Events gallery"
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </motion.div>
           ))}
